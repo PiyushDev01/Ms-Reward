@@ -1,0 +1,485 @@
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header{
+    
+    background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+    height: 100%;
+    width: 100%;
+    
+}
+
+.header1{
+    padding: 50px;
+    display: flex;
+    height: 10%;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 4px #0000003a;
+}
+.clipboard .copy{
+  display: none;
+}
+
+.header img{
+   
+    height: 100px;
+}
+.elements{
+    display: flex;
+    width: 900px;
+    justify-content: space-evenly;
+}
+a{
+  text-decoration: none;
+}
+.elements img {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  border-radius: 50px;
+}
+.contain{
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#6a11cb,#4e0c94);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+
+  }
+  
+  .circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+  .title img{
+    width: 500px;
+    height: 500px;
+  }
+  .card-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    
+  }
+  .card-inner h1{
+    padding: 15px;
+    height: 30%;
+    color: #000000;
+    text-shadow: 2px 2px 4px #0000003a;
+  }
+
+  .btn1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #6a11cb, #430981);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  }
+  
+  .btn1 svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .btn1 span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .btn1:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  .btn1:hover span {
+    transform: translateX(7px);
+  } 
+
+ /* for copy button */
+ /* tooltip settings 👇 */
+
+.copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #CCCCCC;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: 'Ubuntu', sans-serif;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    /* --tooltip-transition-duration: 0.3s; */
+    /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+  }
+  
+  .copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+  
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip::before {
+    content: attr(data-text-initial);
+  }
+  
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+  }
+  
+  .copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .checkmark {
+    display: none;
+  }
+  
+  /* actions */
+  
+  .copy:hover .tooltip,
+  .copy:focus:not(:focus-visible) .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+  }
+  
+  .copy:focus:not(:focus-visible) .tooltip::before {
+    content: attr(data-text-end);
+  }
+  
+  .copy:focus:not(:focus-visible) .clipboard {
+    display: none;
+  }
+  
+  .copy:focus:not(:focus-visible) .checkmark {
+    display: block;
+  }
+  
+  .copy:hover,
+  .copy:focus {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+  }
+  
+  .copy:hover svg {
+    color: var(--button-hover-text-color);
+  }
+/* for download button */
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #6a11cb;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    transition: background 0.3s;
+  }
+  
+  .button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .button::after,.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  
+  .button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0
+  }
+  
+  .text,.icon {
+    transition: top 0.5s;
+  }
+  
+  .icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button:hover {
+    background: #6c18ff;
+  }
+  
+  .button:hover .text {
+    top: -100%;
+  }
+  
+  .button:hover .icon {
+    top: 0;
+  }
+  
+  .button:hover:before,.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  .input {
+    margin: 30px;
+    width: 120px; 
+    height: 70px;
+    
+    border: 2px solid #ffffff;
+    outline: none;
+    background: none;
+    font-size: 50px;
+    color: #fbf9f9;
+    padding: 15px 20px 10px 20px;
+    text-shadow: 2px 2px 4px #0000003a;
+    box-shadow: inset 8px 8px 15px #43098191,
+                inset -8px -8px 15px #43098192;
+    border-radius: 25px;
+    text-align: center;
+    
+  }
+  
+  .input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input::placeholder {
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .input:focus::placeholder {
+    color: #999;
+  }
+
+
+
+
+
+
+  /* for phone  */
+  @media screen and (max-width: 550px) {
+    .social{
+      display: flex;
+      flex-direction: row;
+     
+    }
+    .header1{
+      padding: 15px;
+      font-size: 10px;
+      flex-wrap: wrap;
+      height: 30%;
+    }
+    .clipboard{
+      display: flex;
+      width: 100px;
+      flex-direction: row-reverse;
+    }
+    .contain{
+      display: flex;
+      padding: 0 50px;
+      justify-content: space-around;
+      align-items: center;
+      height: 500px;
+      flex-direction: column-reverse;
+    }
+    
+    .tooltip{
+      display: none;
+    }
+    .clipboard .copy{
+      display: flex;
+    }
+    .elements{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      height: 120px;
+    padding: 50px;
+    }
+    .elements .copy{
+      display: none;
+    }
+    .elements .button{
+      margin: 10px;
+    }
+    .header img {
+      height: 50px;
+  }
+  .title{
+    display: none;
+  }
+  
+  } 

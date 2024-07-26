@@ -1,0 +1,656 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="image\logo.png" alt="" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Lilita+One&family=Nunito:wght@700;800&family=Poppins:ital,wght@0,200;0,300;0,600;1,500&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>fitness video</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      
+  }
+    .header{
+    
+      
+      height: 200%;
+      width: 100%;
+      
+  }
+  
+
+
+    button {
+      font-size: 18px;
+      display: inline-block;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      will-change: box-shadow,transform;
+      background: radial-gradient( 100% 100% at 100% 0%, #8516fc 0%, #4e0c94 100% );
+      box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+      padding: 0 -2em;
+      border-radius: 1em;
+      color: #fff;
+      height: 2.1em;
+      width: 5em;
+      text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    
+    button:hover {
+      box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+      transform: translateY(-0.1em);
+    }
+    
+    button:active {
+      box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+      transform: translateY(0em);
+    }
+      
+      button.clicked {
+        background: radial-gradient( 100% 100% at 100% 0%, #fff189 0%, #ff5454 100% );
+      }
+
+      /* this card is inspired form this - https://georgefrancis.dev/ */
+
+.card {
+--border-radius: 0.75rem;
+--primary-color: #7257fa;
+--secondary-color: #3c3852;
+width: 210px;
+font-family: "Arial";
+padding: 1rem;
+cursor: pointer;
+border-radius: var(--border-radius);
+background: #f1f1f3;
+box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 30%);
+position: relative;
+margin: 1rem;
+height: 80px;
+}
+
+.card > * + * {
+margin-top: 1.1em;
+}
+
+.card .card__content {
+color: var(--secondary-color);
+font-size: 0.86rem;
+}
+
+.card .card__title {
+padding: 0;
+font-size: 1.3rem;
+font-weight: bold;
+text-align: center;
+}
+
+.links{
+display: flex;
+justify-content: space-around;
+}
+
+
+
+
+/* hover */
+.card:hover .card__title {
+color: var(--primary-color);
+text-decoration: underline;
+}
+.container{
+width: 100%;
+height: 90%;
+display: flex;
+flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+  z-index: -1;
+}
+.header1{
+ height: 10em;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.header1 h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 2px 2px 4px #0000003a;
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="header">
+  <div class="header1">
+    <h1>
+      Video Points
+    </h1>
+  </div>
+<div class="container">
+  
+  <div class="card">
+    <h3 class="card__title">Day 1
+    </h3>
+    <div class="links">
+    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-bench-dip-video-dailymotion-x546il5?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+      <button class="button" id="buttonid1_1"  onclick="toggleColor(this)">
+          Video 1
+      </button></a>  
+      
+      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-19-30day-core-challenge-video-dailymotion-x8635lt?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+        <button class="button" id="buttonid1_2"  onclick="toggleColor(this)">
+            Video 2
+        </button></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="card__title">Day 2
+      </h3>
+      <div class="links">
+      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-dumbbell-row-video-dailymotion-x546il8?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+        <button class="button" id="buttonid2_1"  onclick="toggleColor(this)">
+            Video 1
+        </button></a>
+        
+        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-cable-lat-pulldown-video-dailymotion-x546ild?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+          <button class="button" id="buttonid2_2"  onclick="toggleColor(this)">
+              Video 2
+          </button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card__title">Day 3
+        </h3>
+        <div class="links">
+        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-8-30day-core-challenge-video-dailymotion-x8635ls?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+          <button class="button" id="buttonid3_1"  onclick="toggleColor(this)" >
+              Video 1
+          </button></a>
+          
+          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-goblet-squat-video-dailymotion-x546ima?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+            <button class="button" id="buttonid3_2"  onclick="toggleColor(this)">
+                Video 2
+            </button></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">Day 4
+          </h3>
+          <div class="links">
+          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-23-30day-core-challenge-video-dailymotion-x8635lv?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+            <button class="button" id="buttonid4_1"  onclick="toggleColor(this)">
+                Video 1
+            </button></a>
+            
+            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/starter-s-guide-2019-narrow-grip-chinup-video-dailymotion-x79xz4j?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+              <button class="button" id="buttonid4_2"  onclick="toggleColor(this)">
+                  Video 2
+              </button></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Day 5
+            </h3>
+            <div class="links">
+            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-lateral-raise-exercise-video-dailymotion-xt6fle?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+              <button class="button" id="buttonid5_1"  onclick="toggleColor(this)">
+                  Video 1
+              </button></a>
+              
+              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/forearm-exercises-wrist-curls-video-dailymotion-xsqcei?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                <button class="button" id="buttonid5_2"  onclick="toggleColor(this)">
+                    Video 2
+                </button></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Day 6
+              </h3>
+              <div class="links">
+              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-on-incline-bench-video-dailymotion-xt6f6n?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                <button class="button" id="buttonid6_1"  onclick="toggleColor(this)">
+                    Video 1
+                </button></a>
+                
+                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/lower-abs-exercise-alternating-beat-six-pack-abs-video-dailymotion-xt8fcb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                  <button class="button" id="buttonid6_2"  onclick="toggleColor(this)">
+                      Video 2
+                  </button></a>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3 class="card__title">Day 7
+                </h3>
+                <div class="links">
+                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-30-30day-core-challenge-video-dailymotion-x8635lw?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                  <button class="button" id="buttonid7_1"  onclick="toggleColor(this)">
+                      Video 1
+                  </button></a>
+                  
+                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-video-dailymotion-xt6f7c?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                    <button class="button" id="buttonid7_2"  onclick="toggleColor(this)">
+                        Video 2
+                    </button></a>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">Day 8
+                  </h3>
+                  <div class="links">
+                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-exercises-shoulders-closures-on-head-video-dailymotion-xt6fkd?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                    <button class="button" id="buttonid8_1"  onclick="toggleColor(this)">
+                        Video 1
+                    </button></a>
+                    
+                    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-glute-bridge-video-dailymotion-x546ilb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                      <button class="button" id="buttonid8_2"  onclick="toggleColor(this)">
+                          Video 2
+                      </button></a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <h3 class="card__title">Day 9
+                    </h3>
+                    <div class="links">
+                    <a href="https://www.msn.com/health/fitnessworkoutvideo/build-blockbuster-biceps-wth-mark-wahlberg-s-arm-workout-video-dailymotion-x546ncn?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                      <button class="button" id="buttonid9_1"  onclick="toggleColor(this)">
+                          Video 1
+                      </button></a>
+                      
+                      <a href="https://www.msn.com/health/fitnessworkoutvideo/sculpt-and-tone-your-arms-with-this-quick-workout-video-dailymotion-x2t6ekp?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                        <button class="button" id="buttonid9_2"  onclick="toggleColor(this)">
+                            Video 2
+                        </button></a>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <h3 class="card__title">Day 10
+                      </h3>
+                      <div class="links">
+                      <a href="https://www.msn.com/health/fitnessworkoutvideo/5-ultra-effective-butt-exercises-that-aren-t-squats-video-dailymotion-x590h06?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                        <button class="button" id="buttonid10_1"  onclick="toggleColor(this)">
+                            Video 1
+                        </button></a>
+                        
+                        <a href="https://www.msn.com/health/fitnessworkoutvideo/side-kick-with-bent-knee-video-dailymotion-x137o2e?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                          <button class="button" id="buttonid10_2"  onclick="toggleColor(this)">
+                              Video 2
+                          </button></a>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h3 class="card__title">Day 11
+                        </h3>
+                        <div class="links">
+                        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/calf-exercises-ankle-strengthening-exercise-on-bench-calf-muscle-leg-video-dailymotion-xt6fhm?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                          <button class="button" id="buttonid11_1"  onclick="toggleColor(this)">
+                              Video 1
+                          </button></a>
+                          
+                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/triceps-exercises-dips-2-benches-video-dailymotion-xt8fle?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                            <button class="button" id="buttonid11_2"  onclick="toggleColor(this)">
+                                Video 2
+                            </button></a>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <h3 class="card__title">Day 12
+                          </h3>
+                          <div class="links">
+                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/the-ultimate-5-minute-butt-workout-video-dailymotion-x5881ys?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                            <button class="button" id="buttonid12_1"  onclick="toggleColor(this)">
+                                Video 1
+                            </button></a>
+                            
+                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/a-beginner-abs-workout-you-can-do-in-your-living-room-video-dailymotion-x58spaj?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                              <button class="button" id="buttonid12_2"  onclick="toggleColor(this)">
+                                  Video 2
+                              </button></a>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <h3 class="card__title">Day 13
+                            </h3>
+                            <div class="links">
+                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/4-pilates-exercises-to-relieve-lower-back-pain-video-dailymotion-x59hzrr?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                              <button class="button" id="buttonid13_1"  onclick="toggleColor(this)">
+                                  Video 1
+                              </button></a>
+                              
+                              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-bench-dip-video-dailymotion-x546il5?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                <button class="button" id="buttonid13_2"  onclick="toggleColor(this)">
+                                    Video 2
+                                </button></a>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <h3 class="card__title">Day 14
+                              </h3>
+                              <div class="links">
+                              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-bench-dip-video-dailymotion-x546il5?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                <button class="button" id="buttonid14_1"  onclick="toggleColor(this)">
+                                    Video 1
+                                </button></a>
+                                
+                                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-19-30day-core-challenge-video-dailymotion-x8635lt?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                  <button class="button" id="buttonid14_2"  onclick="toggleColor(this)">
+                                      Video 2
+                                  </button></a>
+                                </div>
+                              </div>
+
+                              <div class="card">
+                                <h3 class="card__title">Day 15
+                                </h3>
+                                <div class="links">
+                                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-dumbbell-row-video-dailymotion-x546il8?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                  <button class="button" id="buttonid15_1"  onclick="toggleColor(this)">
+                                      Video 1
+                                  </button></a>
+                                  
+                                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-cable-lat-pulldown-video-dailymotion-x546ild?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                    <button class="button" id="buttonid15_2"  onclick="toggleColor(this)">
+                                        Video 2
+                                    </button></a>
+                                  </div>
+                                </div>
+
+                                <div class="card">
+                                  <h3 class="card__title">Day 16
+                                  </h3>
+                                  <div class="links">
+                                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-8-30day-core-challenge-video-dailymotion-x8635ls?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                    <button class="button" id="buttonid16_1"  onclick="toggleColor(this)">
+                                        Video 1
+                                    </button></a>
+                                    
+                                    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-goblet-squat-video-dailymotion-x546ima?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                      <button class="button" id="buttonid16_2"  onclick="toggleColor(this)">
+                                          Video 2
+                                      </button></a>
+                                    </div>
+                                  </div>
+
+                                  <div class="card">
+                                    <h3 class="card__title">Day 17
+                                    </h3>
+                                    <div class="links">
+                                    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-goblet-squat-video-dailymotion-x546ima?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                      <button class="button" id="buttonid17_1"  onclick="toggleColor(this)">
+                                          Video 1
+                                      </button></a>
+                                      
+                                      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-goblet-squat-video-dailymotion-x546ima?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                        <button class="button" id="buttonid17_2"  onclick="toggleColor(this)">
+                                            Video 2
+                                        </button></a>
+                                      </div>
+                                    </div>
+
+                                    <div class="card">
+                                      <h3 class="card__title">Day 18
+                                      </h3>
+                                      <div class="links">
+                                      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-lateral-raise-exercise-video-dailymotion-xt6fle?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                        <button class="button" id="buttonid18_1"  onclick="toggleColor(this)">
+                                            Video 1
+                                        </button></a>
+                                        
+                                        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/forearm-exercises-wrist-curls-video-dailymotion-xsqcei?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                          <button class="button" id="buttonid18_2"  onclick="toggleColor(this)">
+                                              Video 2
+                                          </button></a>
+                                        </div>
+                                      </div>
+
+                                      <div class="card">
+                                        <h3 class="card__title">Day 19
+                                        </h3>
+                                        <div class="links">
+                                        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-on-incline-bench-video-dailymotion-xt6f6n?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                          <button class="button" id="buttonid19_1"  onclick="toggleColor(this)">
+                                              Video 1
+                                          </button></a>
+                                          
+                                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/lower-abs-exercise-alternating-beat-six-pack-abs-video-dailymotion-xt8fcb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                            <button class="button" id="buttonid19_2"  onclick="toggleColor(this)">
+                                                Video 2
+                                            </button></a>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <h3 class="card__title">Day 20
+                                          </h3>
+                                          <div class="links">
+                                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-30-30day-core-challenge-video-dailymotion-x8635lw?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                            <button class="button" id="buttonid20_1"  onclick="toggleColor(this)">
+                                                Video 1
+                                            </button></a>
+                                            
+                                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-video-dailymotion-xt6f7c?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                              <button class="button" id="buttonid20_2"  onclick="toggleColor(this)">
+                                                  Video 2
+                                              </button></a>
+                                            </div>
+                                          </div>
+
+                                          <div class="card">
+                                            <h3 class="card__title">Day 21
+                                            </h3>
+                                            <div class="links">
+                                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-exercises-shoulders-closures-on-head-video-dailymotion-xt6fkd?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                              <button class="button" id="buttonid21"  onclick="toggleColor(this)">
+                                                  Video 1
+                                              </button></a>
+                                              
+                                              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-glute-bridge-video-dailymotion-x546ilb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                <button class="button" id="buttonid21_2"  onclick="toggleColor(this)">
+                                                    Video 2
+                                                </button></a>
+                                              </div>
+                                            </div>
+
+                                            <div class="card">
+                                              <h3 class="card__title">Day 22
+                                              </h3>
+                                              <div class="links">
+                                              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-bench-dip-video-dailymotion-x546il5?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                <button class="button" id="buttonid22_1"  onclick="toggleColor(this)">
+                                                    Video 1
+                                                </button></a>
+                                                
+                                                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-19-30day-core-challenge-video-dailymotion-x8635lt?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                  <button class="button" id="buttonid22_2"  onclick="toggleColor(this)">
+                                                      Video 2
+                                                  </button></a>
+                                                </div>
+                                              </div>
+
+                                              <div class="card">
+                                                <h3 class="card__title">Day 23
+                                                </h3>
+                                                <div class="links">
+                                                <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-dumbbell-row-video-dailymotion-x546il8?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                  <button class="button" id="buttonid23_1"  onclick="toggleColor(this)">
+                                                      Video 1
+                                                  </button></a>
+                                                  
+                                                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-cable-lat-pulldown-video-dailymotion-x546ild?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                    <button class="button" id="buttonid23_2"  onclick="toggleColor(this)">
+                                                        Video 2
+                                                    </button></a>
+                                                  </div>
+                                                </div>
+
+                                                <div class="card">
+                                                  <h3 class="card__title">Day 24
+                                                  </h3>
+                                                  <div class="links">
+                                                  <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-8-30day-core-challenge-video-dailymotion-x8635ls?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                    <button class="button" id="buttonid24_1"  onclick="toggleColor(this)">
+                                                        Video 1
+                                                    </button></a>
+                                                    
+                                                    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-goblet-squat-video-dailymotion-x546ima?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                      <button class="button" id="buttonid24_2"  onclick="toggleColor(this)">
+                                                          Video 2
+                                                      </button></a>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="card">
+                                                    <h3 class="card__title">Day 25
+                                                    </h3>
+                                                    <div class="links">
+                                                    <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-23-30day-core-challenge-video-dailymotion-x8635lv?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                      <button class="button" id="buttonid25_1"  onclick="toggleColor(this)">
+                                                          Video 1
+                                                      </button></a>
+                                                      
+                                                      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/starter-s-guide-2019-narrow-grip-chinup-video-dailymotion-x79xz4j?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                        <button class="button" id="buttonid25_2"  onclick="toggleColor(this)">
+                                                            Video 2
+                                                        </button></a>
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="card">
+                                                      <h3 class="card__title">Day 26
+                                                      </h3>
+                                                      <div class="links">
+                                                      <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-lateral-raise-exercise-video-dailymotion-xt6fle?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                        <button class="button" id="buttonid26_1"  onclick="toggleColor(this)">
+                                                            Video 1
+                                                        </button></a>
+                                                        
+                                                        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/forearm-exercises-wrist-curls-video-dailymotion-xsqcei?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                          <button class="button" id="buttonid26_2"  onclick="toggleColor(this)">
+                                                              Video 2
+                                                          </button></a>
+                                                        </div>
+                                                      </div>
+
+                                                      <div class="card">
+                                                        <h3 class="card__title">Day 27
+                                                        </h3>
+                                                        <div class="links">
+                                                        <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-on-incline-bench-video-dailymotion-xt6f6n?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                          <button class="button" id="buttonid27_1"  onclick="toggleColor(this)">
+                                                              Video 1
+                                                          </button></a>
+                                                          
+                                                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/lower-abs-exercise-alternating-beat-six-pack-abs-video-dailymotion-xt8fcb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                            <button class="button" id="buttonid27_2"  onclick="toggleColor(this)">
+                                                                Video 2
+                                                            </button></a>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="card">
+                                                          <h3 class="card__title">Day 28
+                                                          </h3>
+                                                          <div class="links">
+                                                          <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/day-30-30day-core-challenge-video-dailymotion-x8635lw?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                            <button class="button" id="buttonid28_1"  onclick="toggleColor(this)">
+                                                                Video 1
+                                                            </button></a>
+                                                            
+                                                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/bent-over-lateral-raises-video-dailymotion-xt6f7c?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                              <button class="button" id="buttonid28_2"  onclick="toggleColor(this)">
+                                                                  Video 2
+                                                              </button></a>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="card">
+                                                            <h3 class="card__title">Day 29
+                                                            </h3>
+                                                            <div class="links">
+                                                            <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/dumbbell-exercises-shoulders-closures-on-head-video-dailymotion-xt6fkd?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                              <button class="button" id="buttonid29_1"  onclick="toggleColor(this)">
+                                                                  Video 1
+                                                              </button></a>
+                                                              
+                                                              <a href="https://www.msn.com/en-gb/health/fitnessworkoutvideo/how-to-do-a-glute-bridge-video-dailymotion-x546ilb?ocid=entnewsntp&ChallengeId=30-day-weight-loss-challenge-mark-sneddon&type=fitnesschallenge&cvid=466eca9f7f4248b3852dcce38181e7f3" target="_blank">
+                                                                <button class="button" id="buttonid29_2"  onclick="toggleColor(this)">
+                                                                    Video 2
+                                                                </button></a>
+                                                              </div>
+                                                            </div>
+
+                                                      
+
+                                                          </div>
+</div>
+<script>
+    
+
+  // Function to toggle the clicked class and store the state in localStorage
+  function toggleColor(button) {
+    button.classList.toggle("clicked");
+    var buttonId = button.getAttribute("id");
+    var clickedButtons = JSON.parse(localStorage.getItem("clickedButtons")) || {};
+    clickedButtons[buttonId] = button.classList.contains("clicked");
+    localStorage.setItem("clickedButtons", JSON.stringify(clickedButtons));
+  }
+  
+  // Restore the clicked state of buttons from localStorage on page load
+  window.addEventListener("load", function() {
+    var clickedButtons = JSON.parse(localStorage.getItem("clickedButtons")) || {};
+    for (var buttonId in clickedButtons) {
+      var button = document.getElementById(buttonId);
+      if (button) {
+        if (clickedButtons[buttonId]) {
+          button.classList.add("clicked");
+        } else {
+          button.classList.remove("clicked");
+        }
+      }
+    }
+  });
+  
+  
+  
+  
+    </script>
+
+
+</body>
+</html>
