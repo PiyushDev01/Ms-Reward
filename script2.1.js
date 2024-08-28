@@ -22,8 +22,8 @@ function searchQueries() {
     var query = queries[i];
     
     var searchQuery = query;
-    // var newTab = window.open("https://www.bing.com/search?q=" + encodeURIComponent(searchQuery), "_blank");
-    var newTab = window.open("https://www.piyushdev.me", "_blank");
+     var newTab = window.open("https://www.bing.com/search?q=" + encodeURIComponent(searchQuery), "_blank");
+    //var newTab = window.open("https://www.piyushdev.me", "_blank");
 // newTab.location.href = "";
 
     tabs.push(newTab);
